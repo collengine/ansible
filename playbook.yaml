@@ -1,0 +1,12 @@
+--- 
+- name: Redis Master Setup  
+  hosts: all
+  become: true
+  tasks:
+    - name: Installing Redis
+      yum: 
+        name:
+          - redis-6.2.7-1.el9
+          - vim
+          - net-tools
+        state: present
